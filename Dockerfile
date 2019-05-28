@@ -43,9 +43,11 @@ WORKDIR $GOPATH
 
 # install tokenized smart-contract
 RUN mkdir -p $GOPATH/src/github.com/tokenized
-RUN cd $GOPATH/src/github.com/tokenized
-RUN git clone https://github.com/tokenized/smart-contract.git
-RUN cd smart-contract
+RUN cd $GOPATH/src/github.com/tokenized \
+ && git clone https://github.com/tokenized/ \
+ && smart-contract.git
+
+WORKDIR $GOPATH/src/github.com/tokenized/smart-contract
 
 ADD ./smart-contract.sh ./smart-contract.sh
 
