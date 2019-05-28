@@ -49,7 +49,7 @@ RUN cd smart-contract
 
 ADD ./smart-contract.sh ./smart-contract.sh
 
-RUN source ./smart-contract.sh
+RUN sh ./smart-contract.sh
 
 RUN make
 
