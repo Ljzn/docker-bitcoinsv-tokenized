@@ -42,16 +42,17 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
 
 # install tokenized smart-contract
-RUN mkdir -p $GOPATH/src/github.com/tokenized
-RUN cd $GOPATH/src/github.com/tokenized \
- && git clone https://github.com/tokenized/smart-contract.git
+# RUN mkdir -p $GOPATH/src/github.com/tokenized
+# RUN cd $GOPATH/src/github.com/tokenized \
+#  && git clone https://github.com/tokenized/smart-contract.git
 
-WORKDIR $GOPATH/src/github.com/tokenized/smart-contract
+# WORKDIR $GOPATH/src/github.com/tokenized/smart-contract
 
-ADD ./smart-contract.sh ./smart-contract.sh
+# ADD ./smart-contract.sh ./smart-contract.sh
 
-RUN sh ./smart-contract.sh
+# RUN sh ./smart-contract.sh
 
-RUN make
+# RUN make
 
-CMD ["make", "run"]
+# CMD ["make", "run"]
+# RUN go get github.com/tokenized/smart-contract/cmd/...
