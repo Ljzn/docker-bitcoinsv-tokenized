@@ -56,3 +56,4 @@ WORKDIR $GOPATH
 
 # CMD ["make", "run"]
 # RUN go get github.com/tokenized/smart-contract/cmd/...
+ENTRYPOINT ["bitcoind", "-conf=/Bitcoin/bitcoin.conf"]
